@@ -15,9 +15,9 @@ const productionGzipExtensions = /\.(js|css|json|html)(\?.*)?$/i
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-const target = 'proxy url'
+const target = 'http://localhost:8090'
 
-const devProxy = ['/$prefix']
+const devProxy = ['/api']
 
 const proxyObj = {}
 
@@ -187,7 +187,7 @@ module.exports = {
 
   devServer: {
     host: '0.0.0.0',
-    port: 8080,
+    port: 8889,
     open: true,
     proxy: proxyObj
   }

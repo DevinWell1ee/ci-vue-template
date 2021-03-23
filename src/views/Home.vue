@@ -13,6 +13,12 @@ export default {
   name: 'Home',
   components: {
     HelloWorld
+  },
+  created() {
+    this.$api.test.testHttp()
+      .then(res => {
+        console.log(res)
+      })
   }
 }
 </script>
